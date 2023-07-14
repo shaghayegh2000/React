@@ -1,7 +1,8 @@
 import './App.css';
 import Counter from './component/Counter';
+// import { Component } from 'react';
 
-function App() {
+const App = () => {
   return (
     <>
       <div className='App'>
@@ -11,5 +12,20 @@ function App() {
     </>
   );
 }
+
+// class component
+// class App extends Component {
+//   render() {
+//       return (
+//     <>
+//       <div className='App'>
+//         <h2>My counter</h2>
+//         <Counter/>
+//       </div>
+//     </>
+//   );
+//   }
+// }
+
 
 export default App;
