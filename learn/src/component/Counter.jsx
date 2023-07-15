@@ -9,9 +9,9 @@ const Counter = ({inc , dec , res , count}) => {
         // </>
         
             <>
-                <h1>{count}</h1>
+                <h1 style={{color: count===0 ? 'red' : 'green'}}>{count}</h1>
                 <button className="btnS" onClick={inc}>+</button>
-                <button className="btnS" onClick={dec}>-</button>
+                <button style={{backgroundColor: count===0 ? 'orange' : '' , opacity: count===0 ? .3 : 1}} className="btnS" onClick={dec}>-</button>
                 <button className="btnS" onClick={res}>C</button>
             </>
     )

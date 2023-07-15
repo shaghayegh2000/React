@@ -67,16 +67,21 @@ const App = () => {
     setCount(count+1)
   }
   const decreaseCount = () => {
-    setCount(count-1)
+    if (count>0) {
+      setCount(count-1)
+    }
   }
   const resetCount = () => {
     setCount(0)
   }
+  
+  //inline styling
+  // const myStyle = {border: '1px solid black'}
 
   return (
     <div className='App'>
       <header>
-        <h2>My Counter</h2>
+        <h2 style={{color:'blue'}}>My Counter</h2>
       </header>
       <Counter inc={increaseCount} dec={decreaseCount} res={resetCount} count={count}/>
       <p>{count}</p>
