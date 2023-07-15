@@ -78,9 +78,9 @@ const App = () => {
       <header>
         <h2>My Counter</h2>
       </header>
-      <Counter/>
+      <Counter inc={increaseCount} dec={decreaseCount} res={resetCount} count={count}/>
       <p>{count}</p>
-      <p>{name}</p>
+      {/* <p>{name}</p> */}
       <button className='btn' onClick={changeCount}>change count</button>
     </div>
   )
