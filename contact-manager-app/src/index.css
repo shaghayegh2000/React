@@ -1,3 +1,14 @@
 body {
     font-family: 'vazir' , 'tahoma' !important;
 }
+
+.input-group-text {
+    background-color: purple;
+}
+.input {
+    background-color: gray;
+}
+input.form-control {
+    border: 1px solid purple;
+    background-color: gray;
+}

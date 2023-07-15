@@ -1,11 +1,10 @@
 import './App.css';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
     <>
-      <h3>Contact Manager Application</h3>
-      <button className='btn btn-dark px-4'>btn</button>
-      <span className='fa fa-user'></span>
+      <Navbar/>
     </>
   )
 }
