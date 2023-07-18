@@ -7,12 +7,12 @@ const Contact = () => {
                     <div className="card-body">
                         <div className="row d-flex justify-content-around">
                             <div className="col-md-4 col-sm-4">
-                                {/* <img className="img-fluid rounded" src="../../assets/download.png" alt="fnfdnfn"/> */}
-                                <div style={{ height: 150, width: 150 }} className="d-flex justify-content-center align-items-center img-fluid bg-secondary rounded">
+                                <img className="img-fluid rounded" src={require("../../assets/download.png")} alt="fnfdnfn"/>
+                                {/* <div style={{ height: 150, width: 150 }} className="d-flex justify-content-center align-items-center img-fluid bg-secondary rounded">
                                     150*150 PX
-                                </div>
+                                </div> */}
                             </div>
-                            <div className="col-md-7 col-sm-7">
+                            <div className="d-flex justify-content-center align-items-center col-md-7 col-sm-7">
                                 <ul className="list-group">
                                     <li className="list-group-item list-group-item-dark">Name : {" "} <span>
                                         Shaghayegh Mohamadi

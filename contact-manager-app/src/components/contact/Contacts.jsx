@@ -1,7 +1,8 @@
 import { Fragment } from "react";
-import { Pink } from "../../helpers/colors";
+import { CurrentLine, Pink } from "../../helpers/colors";
 import Contact from "./Contact";
-const Contacts = () => {
+import Sppiner from "../Spinner";
+const Contacts = ({ contacts, loading }) => {
     return (
         <Fragment>
             <section className="container text-center my-3">
@@ -17,11 +18,26 @@ const Contacts = () => {
                     </div>
                 </div>
             </section>
-            <section className="container">
-                <div className="row">
-                    <Contact/>
-                </div>
-            </section>
+            {
+                loading ? <Sppiner /> : (
+                    <section className="container">
+                        <div className="row">
+                            {
+                                contacts.length > 0 ? contacts.map((c) => (
+                                    <Contact key={c.id} contact={c} />
+                                )) :
+                                    (
+                                        <div className="rounded-pill text-center py-5 w-75 m-auto my-4" style={{ backgroundColor: CurrentLine }}>
+                                            <p className="h4 text-warning">Contact does not found</p>
+                                            <img className="w-25 mt-4" src={require("../../assets/no-found.gif")} alt="Not Found" />
+                                        </div>
+                                    )
+                            }
+
+                        </div>
+                    </section>
+                )
+            }
         </Fragment>
     )
 }
