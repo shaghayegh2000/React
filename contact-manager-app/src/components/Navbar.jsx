@@ -1,15 +1,15 @@
-import styles from '../Navbar.module.css'
 import SearchContact from './contact/SearchContact';
+import {Purple , Background} from '../helpers/colors'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-dark navbar-expand-sm shadow-lg">
+        <nav className="navbar navbar-dark navbar-expand-sm shadow-lg" style={{backgroundColor: Background}}>
             <div className="container">
                 <div className="row w-100">
-                    <div className="col mt-2">
-                        <i className="fa fa-id-badge"></i>
+                    <div className="col my-auto navbar-brand">
+                        <i className="fa fa-id-badge" style={{color:Purple}}></i>
                         {" "}contact manager web application{" "}
-                        <span className={styles.purple}>Contacts</span>
+                        <span style={{color: Purple}}>Contacts</span>
                     </div>
                     <div className='col'>
                         <SearchContact/>
