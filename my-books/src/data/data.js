@@ -36,7 +36,8 @@ const books = [
 export const getBooks = () => {
   return books;
 };
+
 export const getBook = (number) => {
-  return Book.find((book) => 
+  return books.find((book) => 
     book.number === number);
 };

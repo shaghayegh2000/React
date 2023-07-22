@@ -13,8 +13,14 @@ root.render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route path='/about' element={<About />}></Route>
-          <Route path='/books' element={<Books />}></Route>
-          <Route path='/books/:bookId' element={<Book/>}></Route>
+          <Route path='/books' element={<Books />}>
+            <Route index element={
+              <main className='p-3'>
+                <p>Chosse your book</p>
+              </main>
+            }></Route>
+            <Route path=':bookId' element={<Book />}></Route>
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
