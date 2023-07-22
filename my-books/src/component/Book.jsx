@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
+
 const Book = () => {
+    const bookId = useParams();
     return (
-        <div className="py-2">
-            <h2>Our Books Page</h2>
+        <div>
+            <p>Book Id : {bookId.bookId}</p>
         </div>
     )
 }
