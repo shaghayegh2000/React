@@ -1,4 +1,4 @@
-import Book from "../component/Book";
+// import Book from "../component/Book";
 
 const books = [
   {

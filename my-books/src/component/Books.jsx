@@ -1,4 +1,4 @@
-import { Link , Outlet} from 'react-router-dom';
+import {NavLink , Outlet} from 'react-router-dom';
 import {getBooks} from '../data/data';
 
 const Books = () => {
@@ -10,7 +10,13 @@ const Books = () => {
                 <input className='mx-3' type="text" placeholder='Search book'/>
                 {
                     allBooks.map((book) => (
-                        <Link className='mx-5 my-1 d-block text-black' to={`/books/${book.number}`} key={book.number}>{book.name}</Link>
+                        <NavLink style={({isActive}) => {
+                            return {
+                                display : "block",
+                                margin : "2rem 0",
+                                color : isActive ? "red" : "",
+                            };
+                        }} className='mx-5 my-1 d-block text-black' to={`/books/${book.number}`} key={book.number}>{book.name}</NavLink>
                     ))
                 }
             </nav>

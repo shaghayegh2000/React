@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from './component/About';
 import Books from './component/Books';
 import Book from './component/Book';
+import NotFound  from './component/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
             <Route path=':bookId' element={<Book />}></Route>
           </Route>
         </Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
