@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link , Outlet} from "react-router-dom";
 import { getBooks } from "../data/data";
 import styles from "../modules/Books.module.css";
 
@@ -10,11 +10,13 @@ const Books = () => {
             <input type="text" placeholder="Search Book"/>
             {
                 allBooks.map((book)=>(
-                    <Link className="d-block" to={`/books/${book.number}`} key={book.number}>{book.name}</Link>
+                    <Link className="d-block mt-2 " to={`/books/${book.number}`} key={book.number}>{book.name}</Link>
                 ))
             }
         </nav>
+        <Outlet/>
       </div>
+      
     )
   }
   

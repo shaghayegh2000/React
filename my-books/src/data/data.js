@@ -35,3 +35,7 @@ const books = [
 export const getBooks = () => {
   return books;
 };
+
+export const getBook = (numb) => {
+  return books.find(book => book.number === numb);
+}
