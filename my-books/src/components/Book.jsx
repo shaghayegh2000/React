@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
-import { getBook } from "../data/data";
+import { useParams , useNavigate , useLocation} from "react-router-dom";
+import { getBook , deletBook } from "../data/data";
 
 const Book = () => {
     const params = useParams();
     const book = getBook(parseInt(params.bookId));
+    const navig = useNavigate();
+    const loc = useLocation();
 
     if (book) {
         return (
@@ -12,7 +14,10 @@ const Book = () => {
                 <h6 className="my-3">{book.name}</h6>
                 <h6 className="my-3">Date of publish : {book.due}</h6>
                 <p className="mt-4">
-                    <button className="btn btn-outline-dark border-2">Delete Book</button>
+                    <button onClick={()=>{
+                        deletBook(book.number);
+                        navig("/books" + loc.search)
+                    }} className="btn btn-outline-dark border-2">Delete Book</button>
                 </p>
             </div>
         )
