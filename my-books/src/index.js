@@ -22,6 +22,11 @@ root.render(
         </Route>
         <Route path='/about' element={<About/>}></Route>
       </Route>
+      <Route path='*' element={
+        <main style={{height:600}} className='d-flex justify-content-center align-items-center'>
+          <h4 className='bg-secondary py-5 w-50 text-center rounded-pill text-white'>Page Not Found!</h4>
+        </main>
+      }></Route>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
