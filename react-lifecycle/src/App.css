@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.btn {
+  width: 120px;
+  height: 35px;
+  opacity: .8;
+}
+.btnS {
+  margin: 0 3px;
+  width: 30px;
+  height: 30px;
+}
+.btn,.btnS:hover {
+  opacity: 1;
+}
