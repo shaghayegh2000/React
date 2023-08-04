@@ -6,9 +6,7 @@ class App extends Component {
   constructor() {
     super();
     console.log("App.js - constructor()");
-    this.state = { date: new Date(), showClock: true, color: false };
-    this.colorChange = this.clockChange.bind(this);
-    this.clockChange = this.clockChange.bind(this);
+    this.state = { date: new Date(), showClock: true, color: false }
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -18,45 +16,16 @@ class App extends Component {
 
   componentDidMount() {
     console.log("App.js - componentDidMount()");
-    this.timer = setInterval(() =>
-      this.tick(), 1000);
-  }
 
-  componentWillUnmount() {
-    console.log("App.js - componentWillUnmount()");
-    clearInterval(this.timer);
   }
-
-  tick() {
-    this.setState({ date: new Date() });
-  }
-
-  clockChange() {
-    this.setState({showClock: !this.state.showClock});
-  }
-
-  colorChange() {
-    this.setState({color: !this.state.color})
-  }
-
   render() {
     console.log("App.js - render()");
-
-    const { date, showClock, color } = this.state;
-
     return (
-      
-      <div className='App'>
-        <p>Hello world!</p>
-        {
-          showClock ? null  : <Clock date={date}/>
-        }
-        <button className='mx-3 py-1 rounded-3' onClick={this.clockChange}>Show Time</button>
-        <button className='mx-3 py-1 rounded-3' onClick={this.colorChange}>Change Color</button>
+      <div className='text-center mt-3'>
+        <p className='text-uppercase h5'>Hello Every Body!</p>
       </div>
     )
   }
-
 }
 
 export default App;
