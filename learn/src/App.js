@@ -35,11 +35,11 @@ import { useState } from 'react';
 // learn state in class and function
 // class App extends Component {
 
-  // state = {
-  //   count: 0,
-  //   name: "Shaghayegh",
-  //   Lname: "Mohamadi"
-  // }
+// state = {
+//   count: 0,
+//   name: "Shaghayegh",
+//   Lname: "Mohamadi"
+// }
 
 //   render(){
 //     const{count , name , Lname} = this.state;
@@ -55,13 +55,13 @@ import { useState } from 'react';
 //   }
 // }
 
-const App = () => { 
+const App = () => {
   // statefuland stateles 
   const[count , setCount] = useState(0);
-  const[name , setName] = useState("Shaghayegh");
+  // // const[name , setName] = useState("Shaghayegh");
 
   const changeCount = () => {
-    setCount(5);
+    setCount(Math.floor(Math.random() * 50));
   }
   const increaseCount = () => {
     setCount(count+1)
@@ -74,18 +74,17 @@ const App = () => {
   const resetCount = () => {
     setCount(0)
   }
-  
+
   //inline styling
   // const myStyle = {border: '1px solid black'}
 
   return (
     <div className='App'>
       <header>
-        <h2 style={{color:'blue'}}>My Counter</h2>
+        <h2 style={{ color: 'blue' }}>My Counter</h2>
       </header>
-      <Counter inc={increaseCount} dec={decreaseCount} res={resetCount} count={count}/>
+      <Counter inc={increaseCount} dec={decreaseCount} reset={resetCount} count={count}/>
       <p>{count}</p>
-      {/* <p>{name}</p> */}
       <button className='btn' onClick={changeCount}>change count</button>
     </div>
   )

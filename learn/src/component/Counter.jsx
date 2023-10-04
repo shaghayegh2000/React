@@ -1,23 +1,23 @@
 // import { Component } from "react";
 
-const Counter = ({inc , dec , res , count}) => {
+const Counter = ({inc , dec , reset , count}) => {
     return(
         // <>
         //     <p>counter : {Math.floor(Math.random()*1000)}</p>
         //     <p>{props.count || 20} : is a prop!</p>
         //     <p>{props.children} and {props.count} : is a prop!</p>
         // </>
+
+        <>
+            <h1>{count}</h1>
+            <button onClick={inc}>+</button>
+            <button onClick={dec}>-</button>
+            <button onClick={reset}>C</button>
+        </>
+        )
         
-            <>
-                <h1 style={{color: count===0 ? 'red' : 'green'}}>{count}</h1>
-                <button className="btnS" onClick={inc}>+</button>
-                <button style={{backgroundColor: count===0 ? 'orange' : '' , opacity: count===0 ? .3 : 1}} className="btnS" onClick={dec}>-</button>
-                <button className="btnS" onClick={res}>C</button>
-            </>
-    )
 }
 
-Counter.defaultProps = {count: 25}
 
 
 // class component
