@@ -9,10 +9,10 @@ const Counter = ({inc , dec , reset , count}) => {
         // </>
 
         <>
-            <h1>{count}</h1>
-            <button onClick={inc}>+</button>
-            <button onClick={dec}>-</button>
-            <button onClick={reset}>C</button>
+            <h1 className="mb-4 mt-3" style={{color : count === 0 ? 'red' : 'green'}}>{count}</h1>
+            <button className="mx-1" onClick={inc}>+</button>
+            <button className="mx-1 px-2" style={{opacity : count ===0 ? .5 : 1}} onClick={dec}>-</button>
+            <button className="mx-1" onClick={reset}>C</button>
         </>
         )
         
@@ -63,4 +63,10 @@ const Counter = ({inc , dec , reset , count}) => {
 // }
 
 export default Counter;
+
+
+
+
+
+
 

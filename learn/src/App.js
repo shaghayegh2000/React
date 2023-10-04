@@ -81,11 +81,11 @@ const App = () => {
   return (
     <div className='App'>
       <header>
-        <h2 style={{ color: 'blue' }}>My Counter</h2>
+        <h2 className='mt-3'>My Counter</h2>
       </header>
       <Counter inc={increaseCount} dec={decreaseCount} reset={resetCount} count={count}/>
-      <p>{count}</p>
-      <button className='btn' onClick={changeCount}>change count</button>
+      <p></p>
+      <button className='butn mt-3' onClick={changeCount}>change count</button>
     </div>
   )
 }
