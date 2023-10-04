@@ -1,10 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
     return (
-        <>
-            <h3>Contacts web application</h3>
-        </>
+        <div className="App">
+            <Navbar/>
+        </div>
     );
 };
 
