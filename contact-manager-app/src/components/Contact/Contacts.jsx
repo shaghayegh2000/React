@@ -1,7 +1,8 @@
-import {CurrentLine, Pink } from "../../helpers/colors";
-import Contact from "./Contact"; 
+import { CurrentLine, Pink } from "../../helpers/colors";
+import Contact from "./Contact";
+import Spinner from "../Spinner";
 
-const Contacts = ({contacts}) => {
+const Contacts = ({ contacts, loading }) => {
     return (
         <div className="">
             <section className="container">
@@ -17,24 +18,29 @@ const Contacts = ({contacts}) => {
                     </div>
                 </div>
             </section>
-            <section className="container">
-                <div className="row">
-                    {
-                        contacts.length > 0 ? contacts.map(c => (
-                            <Contact key={c.id} contact={c}/>
-                        )) : 
-                        (
-                            <div className="text-center py-5 mt-4" style={{backgroundColor : CurrentLine }}>
-                                <p  className="h3 text-warning">
-                                    Not Found ... !
-                                </p>
-                                <img className="w-25 mt-3" src={require('../../assets/no-found.gif')} alt="" />
-                            </div>
-                        )
-                    }
-                    
-                </div>
-            </section>
+
+            {
+                loading ? <Spinner /> :
+                    (<section className="container">
+                        <div className="row">
+                            {
+                                contacts.length > 0 ? contacts.map(c => (
+                                    <Contact key={c.id} contact={c} />
+                                )) :
+                                    (
+                                        <div className="text-center py-5 mt-4" style={{ backgroundColor: CurrentLine }}>
+                                            <p className="h3 text-warning">
+                                                Not Found ... !
+                                            </p>
+                                            <img className="w-25 mt-3" src={require('../../assets/no-found.gif')} alt="" />
+                                        </div>
+                                    )
+                            }
+
+                        </div>
+                    </section>)
+            }
+
         </div>
     );
 };

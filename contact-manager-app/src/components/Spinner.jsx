@@ -1,7 +1,7 @@
 const Spinner = () => {
     return (
         <>
-            <img src={require('../assets/Spinner.gif')} alt="" style={{ width: '200px' }} />
+            <img className='mt-5' src={require('../assets/Spinner.gif')} alt="" style={{ width: '200px' }} />
         </>
     );
 };

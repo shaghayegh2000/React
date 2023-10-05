@@ -1,20 +1,17 @@
-import {NavLink , Outlet} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './App.css'
 
 const App = () => {
-  return (
-    <div className='text-center'>
-      <h2 >My Books</h2>
-      <nav className='mt-1 py-3 border-bottom border-dark'>
-        <NavLink style={({isActive})=>{
-          return {
-            color: isActive ? "red" : ""
-          }
-        }} className='mx-5' to="/books">Books</NavLink>
-        <NavLink className='mx-5' to="/about">About Us</NavLink>
-      </nav>
-      <Outlet/>
-    </div>
-  )
+    return(
+        <div className='App'>
+            <h1 className='mt-2'>my books</h1>
+
+            <nav className='mt-4' style={{borderBottom : "solid 1px" , paddingBottom : "1.5rem"}}>
+                <Link className='mx-3' to="/books">Books</Link>
+                <Link className='mx-3' to="/about">About Us</Link>
+            </nav>
+        </div>
+    )
 }
 
 

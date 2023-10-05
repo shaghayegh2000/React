@@ -14,7 +14,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="col">
-                        <SearchContact />
+                        <SearchContact/>
                     </div>
                 </div>
             </div>
