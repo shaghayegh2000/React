@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import './App.css'
+import { Link , Outlet} from 'react-router-dom';
+import './App.css';
 
 const App = () => {
     return(
@@ -10,6 +10,7 @@ const App = () => {
                 <Link className='mx-3' to="/books">Books</Link>
                 <Link className='mx-3' to="/about">About Us</Link>
             </nav>
+            <Outlet/>
         </div>
     )
 }
