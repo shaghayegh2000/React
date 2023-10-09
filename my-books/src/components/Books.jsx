@@ -1,10 +1,12 @@
-import { NavLink, Outlet , useSearchParams } from "react-router-dom";
+import { NavLink, Outlet , useSearchParams , useLocation} from "react-router-dom";
 import { getBooks } from "../data/data";
 
 
 const Books = () => {
 
     const [searchPara , setSearchPara] = useSearchParams(); 
+
+    const loca = useLocation();
 
     const books = getBooks();
     return (
@@ -19,13 +21,20 @@ const Books = () => {
                         setSearchPara({});
                     }
                 }} className="my-4 mx-2" type="text" placeholder="search book" />
+                
                 {
-                    books.map((book) => (
+                    books.filter((book)=>{
+                        let filter = searchPara.get("filter");
+                        if(!filter) return true;
+                        let name = book.name.toLocaleLowerCase();
+                        return name.startsWith(filter.toLowerCase());
+                    })
+                    .map((book) => (
                         <NavLink style={({ isActive }) => {
                             return {
                                 color: isActive ? "red" : ""
                             }
-                        }} className="d-block my-2 text-decoration-none" to={`/books/${book.number}`} key={book.number}>{book.name}</NavLink>
+                        }} className="d-block my-2 text-decoration-none" to={`/books/${book.number}${loca.search}`} key={book.number}>{book.name}</NavLink>
                     ))
                 }
             </nav>
@@ -35,8 +44,10 @@ const Books = () => {
 
 }
 
-
 export default Books;
+
+
+
 
 
 
