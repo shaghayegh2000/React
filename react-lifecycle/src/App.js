@@ -1,31 +1,31 @@
-import './App.css';
-import { Component } from 'react';
-import Clock from './component/Clock';
+import { Component } from "react";
+import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-    console.log("App.js - constructor()");
-    this.state = { date: new Date(), showClock: true, color: false }
-  }
+    constructor() {
+        super();
+        console.log("App.js - constructor()");
+        this.state = { date: new Date(), showClock: true, color: false };
+    }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log("App.js - getDerivedStateFromProps()");
-    return state;
-  }
+    static getDerivedStateFromProps(props, state) {
+        console.log("App.js - getDerivedStateFromProps()");
+        return state;
+    }
 
-  componentDidMount() {
-    console.log("App.js - componentDidMount()");
+    componentDidMount(){
+        console.log("App.js - componentDidMount()");
+    }
 
-  }
-  render() {
-    console.log("App.js - render()");
-    return (
-      <div className='text-center mt-3'>
-        <p className='text-uppercase h5'>Hello Every Body!</p>
-      </div>
-    )
-  }
+    render() {
+        console.log("App.js - render()");
+
+        return (
+            <div className="App mt-2">
+                <p>Hello World!</p>
+            </div>
+        )
+    }
 }
 
 export default App;

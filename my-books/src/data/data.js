@@ -39,3 +39,9 @@ export const getBooks = () => {
 export const getBook = (number) => {
   return books.find(book => book.number === number);
 }
+
+export const delet = number => {
+  books = books.filter((book) =>
+    book.number !== number 
+  )
+}
