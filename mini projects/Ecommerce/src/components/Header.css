@@ -1,0 +1,66 @@
+.header {
+    background-color: black;
+    height: 3.7rem;
+    align-items: center;
+}
+
+.header-logo {
+    width: 10%;
+}
+
+svg {
+    fill: orange;
+}
+
+span {
+    color: white !important;
+}
+
+.header-search {
+    width: 66%;
+}
+
+.header-nav {
+    justify-content: flex-end;
+    width: 24%;
+    margin-right: 2%;
+}
+
+.header-nav div {
+    width: 35%;
+    flex-direction: column;
+}
+
+.last {
+    width: 20% !important;
+    margin:10px 0 0 -30px;
+}
+
+.header-nav .d-flex span:first-child{
+    font-size: 13px;
+}
+
+.fa-shopping-basket {
+    font-size: 20px;
+}
+
+.h2 {
+    font-weight: 800;
+    letter-spacing: .5px;
+    font-size: .9rem;
+}
+
+.fa-pencil {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+}
+
+.input-group-text , .form-control {
+    height: 2.1rem;
+}
