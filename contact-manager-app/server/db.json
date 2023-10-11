@@ -1,0 +1,25 @@
+{
+    "contacts" : [],
+    "groups" : [
+        {
+            "id" : "1",
+            "name" : "coworker"
+        },
+        {
+            "id" : "2",
+            "name" : "friend"
+        },
+        {
+            "id" : "3",
+            "name" : "family"
+        },
+        {
+            "id" : "4",
+            "name" : "relative"
+        },
+        {
+            "id" : "5",
+            "name" : "noOne"
+        }
+    ]
+}

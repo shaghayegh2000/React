@@ -12,8 +12,11 @@ class Clock extends Component {
         return state;
     }
 
-    shouldComponentUpdate(nextProp , nextState) {
-        return true;
+    shouldComponentUpdate(nextProp, nextState) {
+        console.log("Clock.jsx - shouldComponentUpdate()");
+        if (this.props.date !== nextProp.date) {
+            return true;
+        }
     }
 
     componentDidMount() {
@@ -24,18 +27,28 @@ class Clock extends Component {
         console.log("Clock.jsx - componentWillUnmount()");
     }
 
-    getSnapshotBeforeUpdate(preProp , prevState){
+    getSnapshotBeforeUpdate(preProp, prevState) {
         console.log("Clock.jsx - getSnapshotBeforeUpdate()");
+        return(preProp , prevState);
+    }
+
+    componentDidUpdate(prevProv, prevState, snapShot) {
+        console.log("Clock.jsx - componentDidUpdate()");
+        console.log(snapShot)
     }
 
     render() {
         console.log("Clock.jsx - render()");
 
-        const { date } = this.props;
+        const { date, color } = this.props;
+
+        const style = {
+            color: color ? "tomato" : "black",
+        };
 
         return (
             <>
-                <p>Time : {date.toLocaleTimeString()}</p>
+                <p style={style}>Time : {date.toLocaleTimeString()}</p>
             </>
         )
     }

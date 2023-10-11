@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./App.css";
-import Clock from "./component/Clock";
+import Clock2 from "./component/Clock2";
+// import Clock from "./component/Clock";
 
 class App extends Component {
     constructor() {
@@ -51,7 +52,7 @@ class App extends Component {
 
                 {
                     showClock ? (
-                        <Clock date={date} />
+                        <Clock2 date={date} color={color}/>
                     ) : null
                 }
                 <button type="" onClick={this.clockChange}>Show Clock</button>
