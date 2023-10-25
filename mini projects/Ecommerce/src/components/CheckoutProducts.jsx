@@ -6,6 +6,7 @@ const CheckoutProducts = ({ title, price, rating, image }) => {
             <div className="d-flex flex-column" style={{marginLeft : 25}}>
                 <p className="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo ad assumenda esse asperiores tenetur temporibus earum vero.
                 </p>
+            
                 <p className="m-0">
                     <small>$</small>
                     <strong>300</strong>
